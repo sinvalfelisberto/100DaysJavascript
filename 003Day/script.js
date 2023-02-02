@@ -15,3 +15,7 @@ function setRandomColor() {
 function setBackGroundColor(color) {
     document.body.style.backgroundColor = color
 }
+
+//git add .
+//git commit -m "seu comentário"
+//git push
