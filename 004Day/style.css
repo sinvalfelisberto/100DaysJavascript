@@ -29,15 +29,15 @@ body {
   background-color: var(--light-blue);
   height: 100vh;
 }
-
 p {
   font-size: 1.6rem;
   line-height: 1.5;
+
 }
 
 header {
   text-align: center;
-  color: #fff;
+  color: var(--white);
   padding-bottom: 3rem;
 }
 
@@ -49,6 +49,7 @@ header h1 {
 
 header h1 span {
   font-weight: 700;
+
 }
 
 section .container {
@@ -58,21 +59,16 @@ section .container {
   flex-direction: column;
 }
 
-form {
-  padding-bottom: 1rem;
-}
-
 form button {
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  font-size: 1.4rem;
-  padding: 0.8rem;
-  font-family: inherit;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
   cursor: pointer;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
   transition: all 0.3s;
 }
 
@@ -88,20 +84,25 @@ form button:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
+  
 }
 
 .modal-content {
+  position: relative;
   width: 80%;
   max-width: 60rem;
-  background-color: #eee;
+  background-color: var(--white);
   margin: 15% auto;
-  padding: 2rem;
   border: 1px solid #777;
-  position: relative;
   text-align: center;
-  animation: slide ease 0.8s;
+  animation: slide ease .8s;
+  border-radius: 10px;
+}
+
+.modal-content p {
+  padding: 1.6rem;
 }
 
 @keyframes slide {
@@ -109,28 +110,30 @@ form button:hover {
     transform: translateY(-50rem);
   }
   100% {
-    transform: translateY(0);
-  }
+    transform: translateY(0)
+  } 
 }
+
 
 .close {
   position: absolute;
   top: 5px;
   right: 10px;
-  color: var(--black);
+  color: var(--color-primary);
   font-size: 2rem;
-  cursor: pointer;
+  line-height: 0.5rem;
+  cursor: pointer;  
 }
 
-.slide-up {
-  animation: slide-up ease 0.8s;
-}
-
-@keyframes slide-up {
+@keyframes slideUp {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50rem);
-  }
+    transform: translateY(-50rem)
+  } 
+}
+
+.slide-up {
+  animation: slideUp ease .8s;
 }
